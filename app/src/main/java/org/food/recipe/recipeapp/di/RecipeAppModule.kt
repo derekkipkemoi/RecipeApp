@@ -20,7 +20,7 @@ object RecipeAppModule {
     @Singleton
     fun provideRecipeAppApi() : RecipeAppApi =
         Retrofit.Builder()
-            .baseUrl(Constants.BASE_URl)
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create(RecipeAppApi::class.java)
